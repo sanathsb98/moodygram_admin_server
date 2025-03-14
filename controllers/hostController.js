@@ -1,4 +1,3 @@
-import hostModel from '../models/hostModel.js';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
@@ -15,7 +14,7 @@ const createHostAccount = async (request, response) => {
         console.log(request.body)
        
 
-        const host = await hostModel.findOne({ hostEmail });
+        const host = await HostModel.findOne({ hostEmail });
 
         if (host) {
             return response.status(400).json({ message: "Host already exists" });
@@ -30,7 +29,7 @@ const createHostAccount = async (request, response) => {
         const otpExpirationTime = new Date();
         otpExpirationTime.setMinutes(otpExpirationTime.getMinutes()+15); // set to 15 minutes
 
-        const newHost = new hostModel({
+        const newHost = new HostModel({
             hostName,
             hostEmail,
             hostPhone,
