@@ -1,0 +1,42 @@
+API DOC :
+
+Host Signup:
+
+POST /api/hostSignup
+Request:
+{
+    hostName : "John Doe",
+    hostEmail: "",
+    hostPhone: "",
+    hostPassword: "",
+    hostAltPhone : "",
+    hostAccessToken : "",
+    hostRefreshToken : "",
+    hostResetToken : "",
+    hostEmailOTP : "",
+    hostAccountStatus : "active",
+    hostVerified : false
+}
+
+****************************************************************************************
+Host Signin:
+
+POST /api/hostSignin
+Request:
+{
+    email : "",
+    password : ""
+}
+
+****************************************************************************************
+
+Verify OTP:
+
+POST /api/verify-otp
+Request:
+{
+    "email": "example@gmail.com",
+    "emailOtp": "897654"
+}
+
+****************************************************************************************
