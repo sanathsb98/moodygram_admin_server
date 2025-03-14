@@ -1,4 +1,4 @@
-import HostModel from "../models/hostModel.js";
+import HostModel from "../models/HostModel.js";
 import { generateTokens } from "../utility/generateTokens.js";
 import bcrypt from 'bcryptjs';
 

@@ -1,4 +1,4 @@
-import HostModel from "../models/hostModel";
+import HostModel from "../models/HostModel.js";
 
 const hostforgotPasswordController = async (request,response) => {
     try{
