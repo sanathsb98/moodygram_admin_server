@@ -6,6 +6,7 @@ import hostforgotPasswordController from "../controllers/hostForgotPasswordContr
 import hostResetPasswordController from "../controllers/hostResetPassword.js";
 import hostDetailsController from "../controllers/hostDetailsController.js";
 import { authMiddleware } from "../middleware/authMiddleware.js";
+import hostDetailsEditController from "../controllers/hostDetailsEditController.js";
 
 const router = express.Router();
 
@@ -15,5 +16,6 @@ router.post("/hostSignin",hostLoginController)
 router.post("/hostForgotPassword",hostforgotPasswordController)
 router.post("/hostResetPassword",hostResetPasswordController)
 router.post("/uploadHostDetails",authMiddleware, hostDetailsController)
+router.post("/editHostDetails",authMiddleware,hostDetailsEditController)
 
 export default router;
