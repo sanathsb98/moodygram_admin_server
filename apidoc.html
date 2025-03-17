@@ -42,3 +42,20 @@ Request:
 }
 
 ****************************************************************************************
+Upload Host Details:
+
+POST /api/uploadHostDetails
+Authorization : Bearer token
+Request:
+{
+    "hostAddress": "String",
+    "hostBusinessName": "String",
+    "hostBusinessCity": "String",
+    "hostBusinessState": "String",
+    "hostBusinessPinCode": "String",
+    "hostBusinessProfilePic": "String" //not required
+    "hostBusinessBannerImg": "String", //not required
+    "hostBusinessEmail": "String",
+    "hostBusinessPhone": "String",
+    "hostBusinessAltPhone": "String" 
+}
