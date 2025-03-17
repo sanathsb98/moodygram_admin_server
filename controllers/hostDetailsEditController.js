@@ -18,7 +18,7 @@ const hostDetailsEditController = async (request, response) => {
                 hostBusinessAltPhone
             }
         )
-        response.status(201).json({ message: "Host Details updated successfully"});
+        response.status(201).json({ message: "Host Details updated successfully",hostId});
     }catch(error){
         response.status(500).json({ message: error.message });
     }
