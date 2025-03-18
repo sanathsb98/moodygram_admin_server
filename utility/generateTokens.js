@@ -8,6 +8,11 @@ export const generateTokens = (email) => {
     return { accessToken, refreshToken };
 }
 
+export const generateAccessToken = (email) =>{
+    const accessToken = jwt.sign({ email }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '15m' });
+    return accessToken;
+}
+
 export const verifyToken = (token, secret) => {
     try {
         return jwt.verify(token, secret);
