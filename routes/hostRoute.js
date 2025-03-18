@@ -9,6 +9,7 @@ import { authMiddleware } from "../middleware/authMiddleware.js";
 import hostDetailsEditController from "../controllers/hostDetailsEditController.js";
 import hostDeleteController from "../controllers/hostDeleteController.js";
 import refreshToken from "../utility/refreshToken.js";
+import hostVerifyDeleteController from "../controllers/hostVerifyDeleteHostController.js";
 
 const router = express.Router();
 
@@ -20,6 +21,7 @@ router.post("/hostResetPassword",hostResetPasswordController)
 router.post("/uploadHostDetails",authMiddleware, hostDetailsController)
 router.post("/editHostDetails",authMiddleware,hostDetailsEditController)
 router.post("/deleteHostAccount",authMiddleware,hostDeleteController)
+router.post("/verifyHostDeletion",hostVerifyDeleteController)
 router.post("/refreshToken",refreshToken);
 
 export default router;

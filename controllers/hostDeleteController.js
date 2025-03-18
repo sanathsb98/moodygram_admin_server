@@ -20,7 +20,7 @@ const hostDeleteController = async (request, response) => {
                                     Hey ${host.hostName}, 
                                 </p>
                                 <p>Please click the link below to delete your account!</p>
-                                <a href="${process.env.CLIENT_URL}/resetpassword/${deleteToken}" style="text-decoration:none;color:#009252;font-size:18px;">Delete Account</a>
+                                <a href="${process.env.CLIENT_URL}/deleteAccount/${deleteToken}" style="text-decoration:none;color:#009252;font-size:18px;">Delete Account</a>
                                 <p>If you did not trigger this action, please contact us immediately at help@moodygram.com </p>
                             </body>
                         </html>`
