@@ -4,7 +4,8 @@ env.config();
 
 export const authMiddleware = async (request,response,next) => {
     try {
-     const token = request.header("Authorization");
+    //  const token = request.header("Authorization");
+     const token = request.cookies.accessToken;
         if(!token){
             return response.status(401).json({message:"Authorization Denied"});
         }

@@ -6,7 +6,7 @@ dotenv.config();
 
 export const refreshToken = async (request, response) => {
     try {
-        const {refreshToken} = request.body;
+        const refreshToken = request.cookies.refreshToken;
 
         if(!refreshToken){
             return response.status(401).json({message:"Authorization Denied"});

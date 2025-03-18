@@ -5,12 +5,15 @@ import morgan from 'morgan';
 import helmet from 'helmet';
 import connectDB from '../config/db.js';
 import hostRoute from '../routes/hostRoute.js';
+import cookieParser from "cookie-parser";
 
 dotenv.config();
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
+app.use(cookieParser());
+
 
 // Middleware
 app.use(cors(

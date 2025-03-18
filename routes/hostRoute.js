@@ -10,6 +10,7 @@ import hostDetailsEditController from "../controllers/hostDetailsEditController.
 import hostDeleteController from "../controllers/hostDeleteController.js";
 import refreshToken from "../utility/refreshToken.js";
 import hostVerifyDeleteController from "../controllers/hostVerifyDeleteHostController.js";
+import hostLogoutController from "../controllers/hostLogoutController.js";
 
 const router = express.Router();
 
@@ -23,5 +24,6 @@ router.post("/editHostDetails",authMiddleware,hostDetailsEditController)
 router.post("/deleteHostAccount",authMiddleware,hostDeleteController)
 router.post("/verifyHostDeletion",hostVerifyDeleteController)
 router.post("/refreshToken",refreshToken);
+router.post("/hostLogout",hostLogoutController)
 
 export default router;

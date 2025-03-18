@@ -35,7 +35,8 @@ const hostLoginController = async (request,response) => {
             {
                 hostAccessToken:accessToken,
                 hostRefreshToken:refreshToken
-            }
+            },
+            {new : true} // this ensures the updated document is returned
         )
 
         return response.status(200).json({message:"Host Logged In Successfully",newToken});

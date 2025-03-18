@@ -35,9 +35,6 @@ const hostVerifyDeleteController = async(request,response) => {
 
      return response.status(200).json({message:`Host Account ${host.hostEmail} Deleted Successfully`})
 
-
-
-
     }catch(error){
         response.status(500).json({error:error})
     }
