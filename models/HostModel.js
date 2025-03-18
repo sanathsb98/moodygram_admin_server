@@ -8,7 +8,7 @@ const HostSchema = new Schema({
         required: true
     },
     hostEmail: {
-        type: String,
+        type: String, 
         required: true,
         unique : true,
     },

@@ -9,7 +9,7 @@ const sendEmail = async(email, emailSubject, emailContent) => {
         user: process.env.EMAIL_USER,
         password: process.env.EMAIL_PASSWORD,
         host: 'smtp.gmail.com',
-        ssl: true
+        tls: true
     });
 
     client.send(
