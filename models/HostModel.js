@@ -14,14 +14,18 @@ const HostSchema = new Schema({
     },
     hostPhone: {
         type: String,
-        required: true
+        required: function () {
+            return this.provider === "local";
+        }
     },
     hostAltPhone: {
         type: String,
     },
     hostPassword : {
         type : String,
-        required : true
+        required : function () {
+            return this.provider === "local"
+        }
     },
     hostAccessToken: {
         type: String
@@ -47,6 +51,15 @@ const HostSchema = new Schema({
         type : Boolean,
         default : false
     },
+    provider : {
+        type : String,
+        enum : ["local","google"],
+        default : "local"
+    },
+    hostProfilePicture : {
+       type : String
+    }
+
 },{timestamps : true})
 
 const HostModel = mongoose.model('Host', HostSchema);

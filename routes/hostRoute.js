@@ -26,4 +26,6 @@ router.post("/verifyHostDeletion",hostVerifyDeleteController)
 router.post("/refreshToken",refreshToken);
 router.post("/hostLogout",hostLogoutController)
 
+
+
 export default router;
